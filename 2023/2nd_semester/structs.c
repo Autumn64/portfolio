@@ -49,18 +49,13 @@ void eliminar(){
                     estudiantes[j] = estudiantes[j + 1];
                 }
                 cnt--;
-                Estudiante* nest = realloc(estudiantes, sizeof(Estudiante) * cnt);
-                if(nest != 0){
-                    estudiantes = nest;
-                }
-                if(cnt != 0){
-                    free(nest);
-                }
+                estudiantes = realloc(estudiantes, sizeof(Estudiante) * cnt); //Realloc gets rid of last element.
                 printf("\nEstudiante eliminado exitosamente.\n");
                 system("pause");
                 return;
             }else{
                 printf("\nOperacion cancelada.\n");
+                return;
             }
         }
     }
