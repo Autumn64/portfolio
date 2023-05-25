@@ -1,11 +1,11 @@
-//Autores: Arenas Sanchez Jorge Alejandro, Flores Gomez Aurora Giselle.
+//Autores: Arenas Sánchez Jorge Alejandro, Flores Gómez Aurora Giselle.
 #include <iostream>
 #include <cstdlib> //Para system("pause") y system("cls")
 #include <windows.h> //Necesario para trabajar con Sleep.
 #include <string> //Por favor, los char arrays son terribles lol.
-#include <vector> /*Utilizar un array estï¿½tico de structs limitarï¿½a la cantidad de estudiantes que pueden agregarse. Hicimos pruebas para usar
-                    un array dinï¿½mico y funciona bien en C, pero estï¿½ literalmente roto en C++, por lo que la alternativa mï¿½s sensata y eficiente
-                    es usar un vector en donde los structs de cada estudiante se guarden en cada espacio de ï¿½ste.*/
+#include <vector> /*Utilizar un array estático de structs limitaría la cantidad de estudiantes que pueden agregarse. Hicimos pruebas para usar
+                    un array dinámico y funciona bien en C, pero está literalmente roto en C++, por lo que la alternativa más sensata y eficiente
+                    es usar un vector en donde los structs de cada estudiante se guarden en cada espacio de éste.*/
 using namespace std;
 
 struct Estudiante {
@@ -15,7 +15,11 @@ struct Estudiante {
 void menu(vector<Estudiante>& estudiantes);
 void adds(vector<Estudiante>& estudiantes);
 void rems(vector<Estudiante>& estudiantes);
+void modf(vector<Estudiante>& estudiantes);
+void search(vector<Estudiante>& estudiantes);
 void shwa(vector<Estudiante>& estudiantes);
+
+const char* texto[] = { " estudiante registrado.\n", " estudiantes registrados.\n" }; //Sólo puse esto por payasa.
 
 void intro(){
 	cout << "\n\n\n\n\n\n\n\n\n\n";
@@ -33,7 +37,13 @@ void menu(vector<Estudiante>& estudiantes) {
 	char o;
 	system("cls");
 	Sleep(2000);
-	cout << " ******** ADMINISTRACION DE ESTUDIANTES 1.0 ***********\n" << endl;
+	cout << " ******** ADMINISTRACION DE ESTUDIANTES 1.0 ***********\n";
+	if (estudiantes.size() == 1) {
+		cout << " Actualmente hay " << estudiantes.size() << texto[0] << endl;
+	}
+	else {
+		cout << " Actualmente hay " << estudiantes.size() << texto[1] << endl;
+	}
 	cout << " 1. Alta de estudiantes." << endl;
 	cout << " 2. Baja de estudiantes." << endl;
 	cout << " 3. Modificaciones de estudiantes." << endl;
@@ -41,11 +51,11 @@ void menu(vector<Estudiante>& estudiantes) {
 	cout << " 5. Busqueda de estudiantes." << endl;
 	cout << " 6. Salir.";
 	cout << "\n\n\n\n\n\n\n";
-	cout << " Arenas Sanchez Jorge Alejandro, Flores Gomez Jose Guillermo. 2023. \x1b[A\x1b[A\x1b[A\x1b[A\x1b[A\x1b[A\x1b[A";
+	cout << " Arenas Sanchez Jorge Alejandro, Flores Gomez Aurora Giselle. 2023. \x1b[A\x1b[A\x1b[A\x1b[A\x1b[A\x1b[A\x1b[A";
 	//Ese bonche de simbolos raros son secuencias de escape para mandar el cursor hacia arriba y que "Escoja una opcion" quede en medio.
 	cout << "\n\n Escoja una opcion (1-6): ";
 	cin >> o;
-	cin.ignore(1, '\n'); //cin deja un salto de linea en el flujo de entrada, lo cual crea problemas en el resto del cï¿½digo.
+	cin.ignore(1, '\n'); //cin deja un salto de linea en el flujo de entrada, lo cual crea problemas en el resto del código.
 	switch (o) {
 		case '1':
 			adds(estudiantes);
@@ -53,11 +63,17 @@ void menu(vector<Estudiante>& estudiantes) {
 		case '2':
 			rems(estudiantes);
 			break;
+		case '3':
+			modf(estudiantes);
+			break;
 		case '4':
 			shwa(estudiantes);
 			break;
+		case '5':
+			search(estudiantes);
+			break;
 		case '6':
-			cout << " Saliendo";
+			cout << "\n Saliendo";
 			for (int i = 1; i < 6; i++) {
 				Sleep(500);
 				cout << ".";
@@ -77,7 +93,7 @@ int main()
 	intro();
 	do{
 		menu(estudiantes);
-	} while (true); //El programa regresarï¿½ indefinidamente al menï¿½ principal hasta que se use la opciï¿½n 6.
+	} while (true); //El programa regresará indefinidamente al menú principal hasta que se use la opción 6.
 	return 0;
 }
 
@@ -190,6 +206,82 @@ void shwa(vector<Estudiante>& estudiantes) { //SHoW All
 		}
 	}
 	cout << endl;
+	system("pause");
+	return;
+}
+
+void modf(vector<Estudiante>& estudiantes) { //MODiFy
+	char op;
+	string matricula;
+	system("cls");
+	Sleep(2000);
+	cout << "Ingrese la matricula del estudiante que desea modificar: ";
+	getline(cin, matricula);
+	for (int i = 0; i < estudiantes.size(); i++) {
+		if (matricula == estudiantes[i].matricula) {
+			cout << "\nSe encontro el siguiente estudiante:" << endl;
+			cout << "Matricula: " << estudiantes[i].matricula << endl;
+			cout << "Nombre: " << estudiantes[i].nombre << endl;
+			cout << "Apellido paterno: " << estudiantes[i].app << endl;
+			cout << "Apellido materno: " << estudiantes[i].apm << endl;
+			cout << "Carrera: " << estudiantes[i].carrera << endl;
+			cout << "Correo electronico: " << estudiantes[i].correo << endl;
+			cout << "Numero de telefono: " << estudiantes[i].telefono << endl;
+			cout << "\nDesea modificarlo? (s/n): ";
+			cin >> op;
+			cin.ignore(1, '\n');
+			if (op == 's') {
+				cout << "\n\nIngrese la nueva matricula: ";
+				getline(cin, estudiantes[i].matricula);
+				cout << "Ingrese el nuevo nombre: ";
+				getline(cin, estudiantes[i].nombre);
+				cout << "Ingrese el nuevo apellido paterno: ";
+				getline(cin, estudiantes[i].app);
+				cout << "Ingrese el nuevo apellido materno: ";
+				getline(cin, estudiantes[i].apm);
+				cout << "Ingrese la nueva carrera: ";
+				getline(cin, estudiantes[i].carrera);
+				cout << "Ingrese el nuevo correo electronico: ";
+				getline(cin, estudiantes[i].correo);
+				cout << "Ingrese el nuevo numero de telefono: ";
+				getline(cin, estudiantes[i].telefono);
+				cout << "\nEstudiante modificado exitosamente." << endl;
+				system("pause");
+				return;
+			}
+			else {
+				cout << "\nOperacion cancelada." << endl;
+			}
+			system("pause");
+			return;
+		}
+	}
+	cout << "\nNo se encontro ningun estudiante con esa matricula, volviendo al menu principal." << endl;
+	system("pause");
+	return;
+}
+
+void search(vector<Estudiante>& estudiantes) {
+	string matricula;
+	system("cls");
+	Sleep(2000);
+	cout << "Ingrese la matricula del estudiante que desea buscar: ";
+	getline(cin, matricula);
+	for (int i = 0; i < estudiantes.size(); i++) {
+		if (matricula == estudiantes[i].matricula) {
+			cout << "\nSe encontro el siguiente estudiante:" << endl;
+			cout << "Matricula: " << estudiantes[i].matricula << endl;
+			cout << "Nombre: " << estudiantes[i].nombre << endl;
+			cout << "Apellido paterno: " << estudiantes[i].app << endl;
+			cout << "Apellido materno: " << estudiantes[i].apm << endl;
+			cout << "Carrera: " << estudiantes[i].carrera << endl;
+			cout << "Correo electronico: " << estudiantes[i].correo << endl;
+			cout << "Numero de telefono: " << estudiantes[i].telefono << endl << endl;
+			system("pause");
+			return;
+		}
+	}
+	cout << "\nNo se encontro ningun estudiante con esa matricula, volviendo al menu principal." << endl;
 	system("pause");
 	return;
 }
