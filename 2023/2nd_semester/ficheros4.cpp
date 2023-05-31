@@ -7,7 +7,7 @@ using namespace std;
 
 int main(){
     ifstream f;
-    int i, dato;
+    int dato;
     f.open("datos.txt"); //Ya debe de estar creado previamente
     
     if (!f){
