@@ -5,3 +5,5 @@ Although I have posted a few things in Python, HTML/CSS and JS here, I'm making 
 
 I started this repository on 2023-05-21, 2 months away from finishing the 2nd semester of Computer Systems Engineering at UVM Hispano.
 Also, most of the code provided here is in Spanish, sorry for that :/
+
+PD: Due to personal reasons the name in the files from the 2nd semester is different from the rest of the files, but actually it was the same person who made all of them.
