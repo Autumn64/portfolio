@@ -1,3 +1,4 @@
+//Made by Mónica Nayely Flores Gómez (Autumn64)
 package amigos;
 
 public class Persona{
