@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#app {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: justify;
+    box-sizing: border-box;
+}
+
+#modal-container {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+#modal {
+    background: rgba(0, 0, 0, 0.459);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+#modal-btn-close {
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#modal-content main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.modal-btn {
+    background-color: rgb(255, 206, 239);
+    border: 2px black solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}

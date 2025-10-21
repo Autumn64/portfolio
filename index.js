@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded", () =>window.location.href = "./sticky/index.html");
