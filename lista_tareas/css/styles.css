@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+body {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: "Monserrat", sans-serif;
+    font-size: larger;
+    background-color: #546a7b;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 2px 0;
+    background-color: #393d3f;
+    color: white;
+    font-size: x-large;
+    gap: 20px;
+}
+
+#burger-button {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+}
+
+#nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.500);
+    transition: opacity 0.3s;
+    z-index: 999;
+}
+
+#nav-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0s 0.5s;
+}
+
+#nav-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 100%;
+    background-color: #323637;
+    box-shadow: 0 5px 50px 10px;
+    transform: translateX(0);
+    transition: transform 0.5s;
+}
+
+#nav-menu.hidden {
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+}
+
+#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#uvm-logo {
+    margin: 100px auto 50px;
+    max-width: 70%;
+}
+
+#nav-links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    color: white;
+    gap: 10px;
+}
+
+#nav-links a, #nav-links a:hover, #nav-links a:visited #nav-links a:active {
+    padding: 5px 0;
+    color: white;
+    text-decoration: none;
+    box-sizing: padding-box;
+    transition: background-color 0.2s;
+}
+
+#nav-links a:hover {
+    background-color: #242627;
+}
+
+#nav-links a:active {
+    background-color: #18191a;
+}
+
+#nav-menu footer {
+    font-size: small;
+    color: white;
+    position: fixed;
+    bottom: 70px;
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    background-color: #fdfdff;
+    margin-top: 100px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 60px 5px;
+    margin-bottom: 100px;
+}
+
+@media screen and (width <= 500px) {
+    header {
+        font-size: larger;
+        padding: 5px 10px 15px;
+        gap: 10px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    #nav-menu {
+        width: 100%;
+        box-shadow: none;
+    }
+}
