@@ -1,0 +1,137 @@
+@font-face {
+    font-family: "Monserrat";
+    src: url("../res/ttf/MontserratAlternates.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    background-color: #F2E9E4;
+    font-family: "Monserrat";
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #22223B;
+    color: white;
+}
+
+main {
+    display: flex;
+}
+
+h2 {
+    scroll-margin-top: 100px;
+}
+
+footer {
+    position: fixed;
+    bottom: 15px;
+}
+
+#burger-menu {
+    display: none;
+    max-width: 35px;
+    margin-left: 15px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+#burger-menu img {
+    max-width: 100%;
+    height: auto;
+}
+
+#main-title {
+    margin-left: 25px;
+}
+
+#sticky-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    background-color: #4A4E69;
+    color: white;
+}
+
+#sticky-menu a, #sticky-menu a:visited {
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#sticky-menu a:hover {
+    background-color: #22223B;
+}
+
+#main-content {
+    margin-left: 200px;
+    padding: 40px;
+    text-align: justify;
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.picture img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+}
+
+.text-center {
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (width <= 750px){
+    h2 {
+        scroll-margin-top: 200px;
+    }
+
+    footer {
+        position: fixed;
+        top: 400px;
+    }
+
+    #burger-menu {
+        display: block;
+    }
+
+    #sticky-menu {
+        width: 100%;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+    }
+
+    #main-content {
+        margin-left: 0;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .menu-active {
+        transform: translateX(0) !important;
+    }
+}

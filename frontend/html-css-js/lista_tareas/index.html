@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+</head>
+<body>
+    <header>
+        <span id="burger-button" class="material-icons">menu</span>
+        <span id="main-title">Soluciones de Programación Móvil</span>
+    </header>
+    <div id="nav-container" class="hidden">
+        <div id="nav-menu" class="hidden">
+            <section id="close-btn" class="material-icons">close</section>
+            <section id="uvm-logo">
+                <img src="res/uvm-logo.png" style="width: 100%">
+            </section>
+            <section id="nav-links">
+                <a href="index.html">Lista de tareas</a>
+                <a href="about.html">Acerca de</a>
+            </section>
+            <footer>
+                Flores Gómez Mónica Nayely. 660103897
+            </footer>
+        </div>
+    </div>  
+    <main>
+        <div id="main-container">
+            <h1>Lista de tareas</h1>
+            <hr>
+            <button id="add-btn">Agregar una tarea</button>
+            <div id="tasks-container">
+                <section id="current-tasks"></section>
+                <button id="clean-btn">Limpiar todo</button>
+            </div>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
