@@ -4,7 +4,7 @@
   <img src="https://codeberg.org/Autumn64/AboutMe/raw/branch/main/logo_square_transparent.png" width="200"/>
 </div>
 
-## Noticias de K-Pop en Bootstrap
+## Noticias con API y Bootstrap
 
 ![HTML](https://img.shields.io/badge/HTML-555?style=for-the-badge&logo=html5&logoColor=white&labelColor=%23E34F26)
 ![JavaScript](https://img.shields.io/badge/JavaScript-555?style=for-the-badge&logo=javascript&logoColor=black&labelColor=%23F7DF1E)
@@ -12,7 +12,7 @@
 
 ### Descripción
 
-Ejemplo de aplicación básica de Bootstrap para hacer un portal de noticias de K-Pop simple y minimalista.
+Ejemplo de aplicación básica de Bootstrap para hacer un portal de noticias simple y minimalista.
 
 ### Características
 
@@ -24,6 +24,7 @@ Ejemplo de aplicación básica de Bootstrap para hacer un portal de noticias de 
 
 ![Captura de pantalla 1](screenshots/1.png)
 ![Captura de pantalla 2](screenshots/2.png)
+![Captura de pantalla 2](screenshots/3.png)
 
 ### Cómo hostear
 
@@ -34,6 +35,8 @@ git clone https://codeberg.org/Autumn64/portfolio.git
 ```
 
 - Copie los archivos fuente de este proyecto a su servidor local (Apache, NGINX u otro).
+
+- Cree una cuenta en https://gnews.io/ y obtenga una clave API. Ingrésela en el archivo `getNews.js`.
 
 - Acceda mediante la URL de su servidor. Al ser un sitio web estático debería de mostrarse sin necesidad de configuraciones adicionales.
 
