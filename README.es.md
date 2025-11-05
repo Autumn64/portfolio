@@ -16,12 +16,9 @@
 ## 🛠️ Tecnologías presentes en este portafolio
 
 <div id="tools" align="center">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/html5/html5-plain.svg" title="HTML" alt="HTML" height="60"/>
-  <img src="https://github.com/devicons/devicon/raw/refs/heads/master/icons/css3/css3-plain.svg" title="CSS" alt="CSS" height="60"/>
-  <img src="https://github.com/devicons/devicon/raw/refs/heads/master/icons/javascript/javascript-plain.svg" title="JavaScript" alt="JavaScript" height="60"/>
-  <img src="https://github.com/devicons/devicon/raw/refs/heads/master/icons/bootstrap/bootstrap-original.svg" title="Bootstrap" alt="Bootstrap" height="60"/>
+   <img src="https://github.com/devicons/devicon/raw/refs/heads/master/icons/bootstrap/bootstrap-original.svg" title="Bootstrap" alt="Bootstrap" height="60"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/svelte/svelte-original.svg" title="Svelte" alt="Svelte" height="60"/>
   <img src="res/cordova_256.png" title="Cordova" alt="Cordova" height="60"/>
   <img src="https://github.com/devicons/devicon/raw/refs/heads/master/icons/php/php-original.svg" title="PHP" alt="PHP" height="60"/>
   <img src="res/flask.svg" title="Flask" alt="Flask" height="60"/>
-  <img src="https://github.com/devicons/devicon/raw/refs/heads/master/icons/json/json-original.svg" title="JSON" alt="JSON" height="60"/>
 </div>

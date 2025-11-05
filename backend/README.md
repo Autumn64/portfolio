@@ -10,13 +10,13 @@ En esta categoría se encuentran los proyectos para los cuales he implementado u
 
 En este momento no tengo ninguna API pública disponible, por lo que es necesario clonar este repositorio y configurar el entorno de manera local para probar estos proyectos.
 
-Actualmente esta categoría está dividida en dos tecnologías (click para mostrar):
+Actualmente esta categoría está dividida en dos tecnologías, con su respectivo número de proyectos desarrollados para cada una (click para mostrar):
 
 <div id="backend" align="center">
     <a href="php/">
-        <img src="https://img.shields.io/badge/PHP-555?style=for-the-badge&logo=php&logoColor=white&labelColor=%23777BB4">
+        <img src="https://img.shields.io/badge/PHP--0-555?style=for-the-badge&logo=php&logoColor=white&labelColor=%23777BB4">
     </a><br><br>
     <a href="flask/">
-        <img src="https://img.shields.io/badge/Flask-555?style=for-the-badge&logo=flask&logoColor=white&labelColor=%233BABC3">
+        <img src="https://img.shields.io/badge/Flask--0-555?style=for-the-badge&logo=flask&logoColor=white&labelColor=%233BABC3">
     </a><br><br>
 </div>
