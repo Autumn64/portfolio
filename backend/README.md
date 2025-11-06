@@ -17,6 +17,6 @@ Actualmente esta categoría está dividida en dos tecnologías, con su respectiv
         <img src="https://img.shields.io/badge/PHP--0-555?style=for-the-badge&logo=php&logoColor=white&labelColor=%23777BB4">
     </a><br><br>
     <a href="flask/">
-        <img src="https://img.shields.io/badge/Flask--0-555?style=for-the-badge&logo=flask&logoColor=white&labelColor=%233BABC3">
+        <img src="https://img.shields.io/badge/Flask--1-555?style=for-the-badge&logo=flask&logoColor=white&labelColor=%233BABC3">
     </a><br><br>
 </div>

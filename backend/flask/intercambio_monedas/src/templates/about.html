@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intercambio de monedas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--Barra de navegación-->
+    <nav class="navbar navbar-dark navbar-expand-sm bg-dark mb-5" style="padding: 10px 30px;">
+    <div class="container-fluid">
+        <a class="navbar-brand me-auto">
+            <img src="/static/res/autumn64_blahaj.svg" style="width: 80%; max-width: 200px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mt-3 mb-2 my-sm-0 ms-sm-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/about">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://codeberg.org/Autumn64/portfolio/" target="_blank">Portafolio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <!--Contenedor principal de la página-->
+    <main class="container-fluid mt-5 px-5 text-center">
+        <!--Mensaje de error-->
+        <div class="alert alert-danger" role="alert" id="errorMsg" style="display: none;"></div>
+        <h1 class="h1 mb-5">Intercambio de precios de monedas</h1>
+        <h3 class="h3 my-5">Hecho por Mónica Gómez (Autumn64)</h3>
+        <img class="rounded" src="/static/res/autumn64.gif" style="width: 100%; max-width: 200px;">
+    </main>
+</body>
+</html>
